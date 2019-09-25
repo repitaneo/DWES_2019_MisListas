@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import com.marcos.misListas.beans.Persona;
 import com.marcos.misListas.error.FueraDeRangoException;
+import com.marcos.misListas.negocio.ordenador.OrdenadorPersonas;
 
 public class ListaPersonas {
 
@@ -33,6 +34,8 @@ public class ListaPersonas {
 		// uso la lista interna y me ayudo de ella
 		listaInterna.add(persona);
 	}
+	
+	
 	
 	
 	
@@ -72,6 +75,13 @@ public class ListaPersonas {
 	
 	
 	
+	
+	
+	/**
+	 * Devuelve un iterador sobre los elementos de la lista
+	 * 
+	 * @return el iterador para poder recorrer la lista
+	 */
 	public Iterator<Persona> getPersonas() {
 		
 		return listaInterna.iterator();
@@ -80,6 +90,18 @@ public class ListaPersonas {
 	
 	
 	
+	
+	
+	
+	/**
+	 * Ordenador de la lista que necesita un Comparator para poder ordenadarse
+	 * @param op Ordenador de personas que implementa el Comparator de java
+	 */
+	public void ordenar(OrdenadorPersonas op) {
+		
+		listaInterna.sort(op);
+		
+	}
 	
 	
 	
