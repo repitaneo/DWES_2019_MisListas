@@ -36,7 +36,7 @@ public class Start {
 		persona3.setTelefono("654321267");
 		persona3.setCiudad("Gijón");
 		persona3.setEdad(10);
-		persona3.setPeso(70);	
+		persona3.setPeso(136);	
 		
 		
 		
@@ -45,11 +45,18 @@ public class Start {
 		lista.addPersona(persona2);
 		lista.addPersona(persona3);
 		
+		
+		
+		
+		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
+
+		OrdenadorPersonas op = new OrdenadorPersonas();
+		op.ordenatePeso();
+		lista.ordenar(op);
 		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
 		
-		OrdenadorPersonas op = new OrdenadorPersonas();
+		op.ordenateEdad();
 		lista.ordenar(op);
-		
 		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
 
 	}

@@ -54,7 +54,7 @@ public class ImprimirConsola {
 	
 
 	private static void imprimirPrivado(Persona persona) {
-		System.out.println(persona.getNombre()+" > "+persona.getEdad());
+		System.out.println(persona.getNombre()+" > "+persona.getEdad()+" > "+persona.getPeso());
 	}
 	
 	
