@@ -3,6 +3,7 @@ package com.marcos.misListas.inicio;
 import com.marcos.misListas.beans.Persona;
 import com.marcos.misListas.error.FueraDeRangoException;
 import com.marcos.misListas.negocio.ListaPersonas;
+import com.marcos.misListas.negocio.ordenador.OrdenadorAscendenteDescendente;
 import com.marcos.misListas.negocio.ordenador.OrdenadorPersonas;
 import com.marcos.misListas.print.ImprimirConsola;
 
@@ -49,16 +50,23 @@ public class Start {
 		
 		
 		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
+		OrdenadorAscendenteDescendente op = new OrdenadorAscendenteDescendente();
 
-		OrdenadorPersonas op = new OrdenadorPersonas();
-		op.ordenatePeso();
+		
+		
+		
+		op.setMetodoOrdenacionEdad(OrdenadorAscendenteDescendente.ORDENACION_ASCENDENTE);
 		lista.ordenar(op);
 		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
 		
-		op.ordenateEdad();
+		
+		
+		op.setMetodoOrdenacionEdad(OrdenadorAscendenteDescendente.ORDENACION_DESCENDENTE);
 		lista.ordenar(op);
 		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
 
+		
+		
 	}
 
 	

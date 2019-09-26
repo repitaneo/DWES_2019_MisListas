@@ -8,7 +8,7 @@ import com.marcos.misListas.beans.Persona;
 public class OrdenadorPersonas implements Comparator<Persona> {
 
 	/*
-	 * CRITERIO DE ORNACION
+	 * CRITERIO DE ORDENACION
 	 * 
 	 * 1000: EDAD
 	 * 2000: PESO

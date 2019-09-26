@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import com.marcos.misListas.beans.Persona;
 import com.marcos.misListas.error.FueraDeRangoException;
+import com.marcos.misListas.negocio.ordenador.OrdenadorAscendenteDescendente;
 import com.marcos.misListas.negocio.ordenador.OrdenadorPersonas;
 
 public class ListaPersonas {
@@ -103,7 +104,11 @@ public class ListaPersonas {
 		
 	}
 	
-	
+	public void ordenar(OrdenadorAscendenteDescendente op) {
+		
+		listaInterna.sort(op);
+		
+	}	
 	
 	
 	
