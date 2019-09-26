@@ -27,7 +27,7 @@ public class Start {
 		persona2.setApellidos("García");
 		persona2.setTelefono("654321267");
 		persona2.setCiudad("Gijón");
-		persona2.setEdad(40);
+		persona2.setEdad(27);
 		persona2.setPeso(70);		
 		
 		
@@ -50,19 +50,17 @@ public class Start {
 		
 		
 		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
-		OrdenadorAscendenteDescendente op = new OrdenadorAscendenteDescendente();
 
 		
+		OrdenadorAscendenteDescendente OAD = new OrdenadorAscendenteDescendente();
+		OAD.setMetodoOrdenacionEdad(OrdenadorAscendenteDescendente.ORDENACION_DESCENDENTE);
+		OAD.setMetodoOrdenacionPeso(OrdenadorAscendenteDescendente.ORDENACION_DESCENDENTE);
 		
+		OrdenadorPersonas ordenadorPersonas = new OrdenadorPersonas();
+		ordenadorPersonas.ordenateEdad();
+
 		
-		op.setMetodoOrdenacionEdad(OrdenadorAscendenteDescendente.ORDENACION_ASCENDENTE);
-		lista.ordenar(op);
-		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
-		
-		
-		
-		op.setMetodoOrdenacionEdad(OrdenadorAscendenteDescendente.ORDENACION_DESCENDENTE);
-		lista.ordenar(op);
+		lista.ordenar(ordenadorPersonas);
 		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
 
 		

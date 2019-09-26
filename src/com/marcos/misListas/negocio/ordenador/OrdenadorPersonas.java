@@ -32,12 +32,19 @@ public class OrdenadorPersonas implements Comparator<Persona> {
 	}
 
 	
-	
+	/**
+	 * Operación para establecer el criterio de ordenación a PESO = 2000
+	 */
 	public void ordenatePeso() {
 		
 		criterio = 2000;
 	}
 
+	
+	
+	/**
+	 * Operación para establecer el criterio de ordenación a EDAD = 1000
+	 */
 	public void ordenateEdad() {
 		
 		criterio = 1000;

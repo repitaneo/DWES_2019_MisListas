@@ -1,8 +1,16 @@
 package com.marcos.misListas.beans;
 
+
+
+/**
+ * Bean de la clase Persona
+ * @author marcos
+ *
+ */
 public class Persona {
 
 	
+	// atributos
 	private String nombre;
 	private String apellidos;
 	private String ciudad;
@@ -10,15 +18,16 @@ public class Persona {
 	private int edad;
 	private int peso;
 	
+		
 	
 	
 	
 	
 	
-	
-	
-	
-	
+	/*
+	 * SETTER Y GETTERS
+	 * 
+	 */
 	public String getNombre() {
 		return nombre;
 	}

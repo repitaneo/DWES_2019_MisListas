@@ -1,6 +1,7 @@
 package com.marcos.misListas.negocio;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Iterator;
 
 import com.marcos.misListas.beans.Persona;
@@ -96,20 +97,13 @@ public class ListaPersonas {
 	
 	/**
 	 * Ordenador de la lista que necesita un Comparator para poder ordenadarse
-	 * @param op Ordenador de personas que implementa el Comparator de java
+	 * @param op Clase que implementa el Comparator de java
 	 */
-	public void ordenar(OrdenadorPersonas op) {
+	public void ordenar(Comparator<Persona> ordenador) {
 		
-		listaInterna.sort(op);
+		listaInterna.sort(ordenador);
 		
 	}
-	
-	public void ordenar(OrdenadorAscendenteDescendente op) {
-		
-		listaInterna.sort(op);
-		
-	}	
-	
 	
 	
 	

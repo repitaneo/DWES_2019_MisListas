@@ -52,7 +52,12 @@ public class ImprimirConsola {
 
 
 	
-
+	/**
+	 * Hemos detectado código repetido y hemos sacado esta 
+	 * parte a una operación privada para evitarlo
+	 * 
+	 * @param persona El objeto a imprimir
+	 */
 	private static void imprimirPrivado(Persona persona) {
 		System.out.println(persona.getNombre()+" > "+persona.getEdad()+" > "+persona.getPeso());
 	}

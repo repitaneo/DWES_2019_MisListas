@@ -46,14 +46,31 @@ public class OrdenadorAscendenteDescendente implements Comparator<Persona> {
 			if(criterioEdad == ORDENACION_ASCENDENTE) return -1;
 			else return 1;
 		}
-		else return 0;
+		// igualdad de edades
+		else {
+			
+			if(p1.getPeso()>p2.getPeso()) {
+				
+				if(criterioPeso == ORDENACION_ASCENDENTE) return 1;
+				else return -1;
+			}
+			else if(p1.getPeso()<p2.getPeso()) {
+				
+				if(criterioPeso == ORDENACION_ASCENDENTE) return -1;
+				else return 1;
+			}
+			else return 0;
+		}
 		
 		
 	}
 
 	
 	
-	
+	/**
+	 * establece el criterio para la ordenación de pesos, ascendente o descendente 
+	 * @param metodoPeso el criterio escogido de entre los disponibles
+	 */
 	public void setMetodoOrdenacionPeso(int metodoPeso) {
 		
 		criterioPeso = metodoPeso;
@@ -61,6 +78,10 @@ public class OrdenadorAscendenteDescendente implements Comparator<Persona> {
 
 
 	
+	/**
+	 * establece el criterio para la ordenación de edades, ascendente o descendente 
+	 * @param metodoEdad el criterio escogido de entre los disponibles
+	 */
 	public void setMetodoOrdenacionEdad(int metodoEdad) {
 		
 		criterioEdad = metodoEdad;
